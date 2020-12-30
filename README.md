@@ -25,6 +25,12 @@ sweden-20201210
 
 I opted into putting each date data in separate tables. But I plan to devp it later and perhaps put all together. There are some issues with merging and overlapping of GTFS data. I looked at (Zeches, 2019), but eventually decided to keep the dates just separate. This generates some double work. To avoid it, perhaps later I'll make a loop over the folders if I need to process more days. But for the first 6 days this was the fast and dumb hands-on solution.
 
+## Objectives
+
+One of the objectives was to simply compare the level of public transport (PT) service "before", "during" and "after". Metrics I used:
+1. The first and simplest one - number of departures per hour per km². (10 for example could mean 10 bus departures from one stop or 1 bus departure per stop from 10 stops in that 1x1 km square during that hour)
+2. Even simpler - number of active stops per hour per km² (10 would mean there were 10 distinct stops from which there was a scheduled departure in that hour).
+
 ## Method
 
 - create extra tables Marinka (and from other sources, such as ): run `gtfs_create_extra_tables.sql`
