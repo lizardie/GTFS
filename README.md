@@ -1,7 +1,7 @@
 # GTFS
 My little games with GTFS.
 
-I start by processing GTFS for Sweden using Postgres with PostGIS on localhost. I download the data locally to my comp (and unzip even though probably not necessary).
+I start by processing GTFS for Sweden using Postgres with PostGIS on localhost. I download the data locally to my comp (and unzip even though probably not necessary). I am using my folder structure - if you replicate, change the paths where needed.
 
 ## Data sources
 * Download historic data from here https://data.samtrafiken.se/trafiklab/gtfs-sverige-2/
@@ -28,11 +28,11 @@ I opted into putting each date data in separate tables. But I plan to devp it la
 ## Method
 
 - create extra tables Marinka (and from other sources, such as ): run `gtfs_create_extra_tables.sql`
--   create empty standard tables gtfs Sweden:  run `gtfs_create_empty_standard_tables.sql`
+-   create empty standard tables gtfs Sweden:  run `gtfs_create_standard_empty_tbls.sql`
 - load one day's data
 - re-create empty standard tables between each day
 - process each day
-- analyse 
+- analyse
 
 ## Sources and references and inspiration
 
