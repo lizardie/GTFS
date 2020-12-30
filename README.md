@@ -29,9 +29,9 @@ I opted into putting each date data in separate tables. But I plan to devp it la
 
 - create extra tables Marinka (and from other sources, such as ): run `gtfs_create_extra_tables.sql`
 -   create empty standard tables gtfs Sweden:  run `gtfs_create_standard_empty_tbls.sql`
-- load one day's data
-- re-create empty standard tables between each day
-- process each day
+- load one day's data: run `load_20200227.sql`. For each day use text editor and `find`-`replace` the date (e.g. 20200227 to 20200326)
+- re-create empty standard tables between each day by running  `gtfs_create_standard_empty_tbls.sql`
+- process each day by running
 - analyse
 
 ## Sources and references and inspiration
