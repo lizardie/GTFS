@@ -23,7 +23,7 @@ sweden-20201210
 
 ## Create schema tables and load data
 
-I opted into putting each date data in separate tables. But I plan to devp it later and perhaps put all together. There are some issues with merging and overlapping of GTFS data. I looked at this BA thesis: Zeches, L. F. (2019). Merging of Overlapping GTFS Feeds. 61. But eventually I decided to keep the dates just separate. This generates some double work. Perhaps later I'll make a loop over the folders if I need to process more days. But for 6 days this was the fast and dumb hands-on solution.
+I opted into putting each date data in separate tables. But I plan to devp it later and perhaps put all together. There are some issues with merging and overlapping of GTFS data. I looked at this reference: Zeches, L. F. (2019). Merging of Overlapping GTFS Feeds. 61. But eventually I decided to keep the dates just separate. This generates some double work. Perhaps later I'll make a loop over the folders if I need to process more days. But for 6 days this was the fast and dumb hands-on solution.
 
 ## Useful sources of inspiration
 
@@ -32,5 +32,5 @@ I looked in those sources below when making a schema and extra tables. Some adju
 * https://github.com/tyleragreen/gtfs-schema.git
 * https://github.com/laidig/gtfs-in-postgis-experiments.git
 
-More useful links:
+Some more useful links:
 * https://marcinstepniak.eu/projects/calculus/main_results/gtfs_study/
