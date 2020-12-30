@@ -9,15 +9,9 @@ I start by processing GTFS for Sweden using Postgres with PostGIS on localhost. 
 
 ## Set up
 
-Create the DB (in terminal on Mac) - run `setup_db_in_pg.sh`
+Create the DB (in terminal on Mac) > run `setup_db_in_pg.sh`
 
-Put unzipped data here in raw data folder, mine here:
-
-```
-pwd
-/Users/lizardie/Dropbox/MarinaTogerJohnOsth/BlueCollar/GTFS/data_raw
-ls -1
-```
+Put unzipped data here in raw data folder.
 All files have this naming structure
 ```
 sweden-20200227
