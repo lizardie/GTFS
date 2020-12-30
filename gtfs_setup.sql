@@ -6,7 +6,7 @@
 --0-- setup
 ------------+------∞8∞------+------------
 
---on Mac locally
+--on Mac locally (change the folders and user name as needed)
 "/Applications/Postgres.app/Contents/Versions/11/bin/psql" -p5432 -U "lizardie" -d "gtfs"
 
 -----------------------------------------
@@ -72,6 +72,11 @@ FROM files;
 --create empty standard tables gtfs Sweden
 -- run gtfs_create_empty_standard_tables.sql
 
+--load one day's data
+--re-create empty standard tables between each day
+--process each day
+--analyse 
+
 
 
 ------------------------
@@ -81,6 +86,7 @@ FROM files;
 -- |       |
 ---ooo---ooo------------
 
+-- how long the query will take? Output from EXPLAIN in human readable:
 SELECT '21357376 ms'::INTERVAL calc_time;
 SELECT ( ( 21357376*0.001/(60*60*24*365) ) || ' year' )  bloody_long_calc_time;
 SELECT ( ( 21357376*0.001/(60*60) ) || ' hour' )  bloody_long_calc_time;

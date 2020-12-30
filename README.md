@@ -21,16 +21,28 @@ sweden-20200910
 sweden-20201210
 ```
 
-## Create schema tables and load data
+## Creating schema tables and load data
 
-I opted into putting each date data in separate tables. But I plan to devp it later and perhaps put all together. There are some issues with merging and overlapping of GTFS data. I looked at this reference: Zeches, L. F. (2019). Merging of Overlapping GTFS Feeds. 61. But eventually I decided to keep the dates just separate. This generates some double work. Perhaps later I'll make a loop over the folders if I need to process more days. But for 6 days this was the fast and dumb hands-on solution.
+I opted into putting each date data in separate tables. But I plan to devp it later and perhaps put all together. There are some issues with merging and overlapping of GTFS data. I looked at (Zeches, 2019), but eventually decided to keep the dates just separate. This generates some double work. To avoid it, perhaps later I'll make a loop over the folders if I need to process more days. But for the first 6 days this was the fast and dumb hands-on solution.
 
-## Useful sources of inspiration
+## Method
+
+- create extra tables Marinka (and from other sources, such as ): run `gtfs_create_extra_tables.sql`
+-   create empty standard tables gtfs Sweden:  run `gtfs_create_empty_standard_tables.sql`
+- load one day's data
+- re-create empty standard tables between each day
+- process each day
+- analyse 
+
+## Sources and references and inspiration
 
 I looked in those sources below when making a schema and extra tables. Some adjustments were made for the Swedish data with some columns or tables not existing (e.g. shapes).
 
 * https://github.com/tyleragreen/gtfs-schema.git
 * https://github.com/laidig/gtfs-in-postgis-experiments.git
 
-Some more useful links:
+Some useful links:
 * https://marcinstepniak.eu/projects/calculus/main_results/gtfs_study/
+
+References:
+* Zeches, L. F. (2019). Merging of Overlapping GTFS Feeds. 61.
