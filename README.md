@@ -37,6 +37,14 @@ I opted into putting each date data in separate tables. But I plan to devp it la
 - visualise in QGIS the map of first diffs
 - analyse further with stata
 
+Parameters:
+* Months: February, Late March, June, September ,December
+* Places: Malmö and Stockholm 
+* Time: morning rush hour 7-9
+* Take one thursday per month
+* Agency: Skånetrafiken , SL
+
+
 ## Sources and references and inspiration
 
 I looked in those sources below when making a schema and extra tables. Some adjustments were made for the Swedish data with some columns or tables not existing (e.g. shapes).
@@ -58,9 +66,3 @@ References:
 One of the objectives was to simply compare the level of public transport (PT) service "before", "during" and "after". Metrics I used:
 1. The first and simplest one - number of departures per hour per km². (10 for example could mean 10 bus departures from one stop or 1 bus departure per stop from 10 stops in that 1x1 km square during that hour)
 2. Even simpler - number of active stops per hour per km² (10 would mean there were 10 distinct stops from which there was a scheduled departure in that hour).
-
-Months: February, Late March, June, September ,December
-Places: Malmö and Stockholm 
-Time: morning rush hour 7-9
-Take one thursday per month
-Agency: Skånetrafiken , SL
