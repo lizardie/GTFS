@@ -85,36 +85,6 @@ LIMIT 3;
 
 
 
-
-DROP TABLE IF EXISTS mt_trunc_stops_times_SL_20200910;
-CREATE TABLE mt_trunc_stops_times_SL_20200910 AS
-SELECT row_number() OVER () AS gid
-  ,b.datadate
-  ,b.departure_hour
-  ,departure_time,stop_sequence
-  , trip_id,stop_id , route_id,agency_id,agency_name
-  ,trunc_long_3006 , trunc_lat_3006
-  , geom_trunc
-  , long_3006 , lat_3006  , geom
-FROM       mt_stop_shapes_20200910 a
-INNER JOIN mt_stop_times_20200910 b USING (stop_id)
-INNER JOIN trips_20200910 USING (trip_id)
-INNER JOIN routes_20200910 USING (route_id)
-INNER JOIN agency_20200910 USING (agency_id)
-WHERE --agency_name ~ 'Skånetrafiken'
-  --( agency_name ~ 'SL' OR agency_name ~ 'Skånetrafiken ')
-  agency_id='276'
-  AND departure_time>= '07:00:00'
-  AND departure_time< '09:00:00'
-ORDER BY geom_trunc,departure_time, trip_id,stop_sequence
-LIMIT 33
-;
-
-SELECT * FROM mt_trunc_stops_times_SL_20200910 LIMIT 3;
-
-CREATE INDEX ON mt_trunc_stops_times_SL_20200910 USING gist (geom_trunc);
-CREATE INDEX ON mt_trunc_stops_times_SL_20200910 USING BRIN(departure_hour);
-
 ------------ aggregate by km² and by hour
 
 
