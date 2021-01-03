@@ -1,5 +1,5 @@
 # GTFS
-My little games with GTFS.
+My little games with GTFS. This is still unfinished and totally disorganised.
 
 I start by processing GTFS for Sweden using Postgres with PostGIS on localhost. I download the data locally to my comp (and unzip even though probably not necessary). I am using my folder structure - if you replicate, change the paths where needed.
 
